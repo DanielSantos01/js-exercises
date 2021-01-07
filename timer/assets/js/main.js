@@ -13,6 +13,7 @@ const getMyElements = () => {
 
     const beginEvent = () => {
         clock.classList.remove('emphasis');
+        clearInterval(myInterval);
         myInterval = setInterval(() => {
             clock.innerHTML = new Date(2000, 1, 1, 0, 0, segundos).toLocaleTimeString();
             segundos += 1;
