@@ -47,8 +47,9 @@
     return calculatedNumber < 9 ? calculatedNumber : 0;
   };
 
-  const handleCPF = (cpf = '') => {
-    const parsedCPF = cpf.replace(/\D+/g, '');
+  const checkLength = (length = 0) => length === 11;
+
+  const checkValidate = (parsedCPF = '') => {
     let comparedCPF = parsedCPF.slice(0, 9);
     let initialMultiplier = 10;
 
@@ -60,6 +61,16 @@
 
     const isCompatible = comparedCPF === parsedCPF;
     handleMessage(isCompatible);
+  };
+
+  const handleCPF = (cpf = '') => {
+    const parsedCPF = cpf.replace(/\D+/g, '');
+    const isLengthValid = checkLength(parsedCPF.length);
+    if (!isLengthValid) {
+      handleMessage(false);
+      return;
+    }
+    checkValidate(parsedCPF);
   };
 
   const description = createText('Enter your CPF');
