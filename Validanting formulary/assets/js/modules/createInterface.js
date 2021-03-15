@@ -6,7 +6,7 @@ const createInput = (type, className = '') => {
   return input;
 };
 
-const createButton = (content, className = '', callback) => {
+const createButton = (content, callback, className = '') => {
   const button = document.createElement('button');
   button.innerHTML = content;
   button.classList.add(className);
@@ -43,6 +43,6 @@ export const createInterface = (fields = [], handleValidate) => {
     addChilds([description, input, statusMessage]);
   });
 
-  const submitButton = createButton('Enviar', 'submit', handleValidate);
+  const submitButton = createButton('Enviar', handleValidate, 'submit');
   addChilds([submitButton]);
 };

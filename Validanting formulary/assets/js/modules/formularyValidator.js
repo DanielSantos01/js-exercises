@@ -1,4 +1,5 @@
 import { CPFValidator } from './cpfValidator.js';
+import { fields } from '../data/index.js';
 
 const handleField = (status, field, message) => {
   const success = !!status;
@@ -39,7 +40,7 @@ const handleSpecificCase = (fieldName, fieldValue, field) => {
   }
 };
 
-export const validateForm = (fields = []) => {
+export const validateForm = () => {
   fields.forEach((field) => {
     const { fieldName } = field;
     const fieldInput = document.querySelector(`.${fieldName}`);

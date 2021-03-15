@@ -51,6 +51,15 @@ body {
   font-size: 10px;
 }
 
+.submit {
+  width: 100%;
+  background-color: lightcyan;
+  border: none;
+  height: 30px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
 .success {
   color: green;
 }
