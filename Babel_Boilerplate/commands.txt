@@ -1,0 +1,7 @@
+1) npm init -y (Iniciar o gerenciador de pacotes na pasta atual)
+2) npm i --save-dev @babel/cli @babel/preset-env @babel/core (Dependências do babel)
+3) npx babel main.js -o bundle.js --presets=@babel/env (Seleciona o arquivo de entrada e o nome do arquivo de saída a ser convertido,
+tal qual o preset usado para a conversão)
+4) criar o atributo "babel_converter": "babel ./main.js -o ./bundle.js --presets=@babel/env -w"
+como script do package.json
+5) npm run babel_converter
