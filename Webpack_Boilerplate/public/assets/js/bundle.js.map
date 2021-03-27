@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://Webpack_Boilerplate/./src/index.js"],"names":["name"],"mappings":"orBAEyB,CAAH,GADD,CAAEA,KADV,Y","file":"bundle.js","sourcesContent":["const name = 'Joseph';\nconst myTestObject = { name };\nconst myCopiTestObject = { ...myTestObject };\n"],"sourceRoot":""}
