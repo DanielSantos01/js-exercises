@@ -1,0 +1,7 @@
+1) npm init -y
+2) npm i --save-dev @babel/preset-env @babel/core
+@babel/cli babel-loader webpack webpack-cli regenerator-runtime core-js@2
+3) create file "webpack.config.js"
+4) Criar as configurações do webpack
+5) criar atributo "webpack-loader": "webpack -w" como script do package.json
+6) npm run webpack-loader
